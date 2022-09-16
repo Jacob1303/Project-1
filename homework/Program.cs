@@ -12,3 +12,18 @@ void WriteArray(string[] array) // функция вывода массива в
     }
     Console.Write($"\"{array[array.Length - 1]}\"{".]  "}");
 }
+
+string[] FormationNewArray(string[] array) // функция для редактирования массива согласно условиям
+{
+    for (int i = 0; i <= array.Length; i++)
+    {
+        for (int j = 0; j < array.Length; j++)
+        {
+            if (array[j].Length > 3)
+            {
+                array = array.Except(new string[] { array[j] }).ToArray();
+            }
+        }
+    }
+    return array;
+}
