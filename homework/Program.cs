@@ -27,3 +27,13 @@ string[] FormationNewArray(string[] array) // функция для редакт
     }
     return array;
 }
+
+int CheckArray(string[] arr) // функция проверки наличия строк в массиве, удовлетворяющих услувиям
+{
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3) count = 1;
+    }
+    return count;
+}
